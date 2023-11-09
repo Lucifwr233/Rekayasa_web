@@ -1,0 +1,142 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999; 
+}
+
+.navbar-left {
+    flex: 1; 
+}
+
+.navbar-right {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar-tool {
+    padding: 5px 10px;
+    background-color: #555; 
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navbar-tool:hover {
+    background-color: #777; 
+}
+
+.form-container, table {
+    margin-top: 70px; 
+}
+
+.navbar-tool.animate-refresh {
+    animation: rotate 1s linear;
+}
+
+.navbar-tool a i {
+    color: white;
+}
+
+.navbar-tool a:hover i {
+    animation: rotate 1s linear infinite;
+}
+
+.navbar-tool.animate {
+    animation: spin 1s linear;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+}
+
+form {
+    margin-top: 20%;
+    border-radius: 20px;
+    padding: 2em;
+    width: 450px;
+}
+
+table {
+    margin-top: 30%;
+    width: 100%;
+}
+
+input,
+textarea,
+select {
+    width: 300px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    vertical-align: top;
+}
+
+
+.dark-mode {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.dark-mode table.table {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.dark-mode table.table thead {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.dark-mode table.table tbody {
+    background-color: #272b30;
+}
+
+.dark-mode table.table tbody tr {
+    color: #ffffff;
+}
+
+.dark-mode table.table tbody tr:hover {
+    background-color: #444a50;
+}
+
+.dark-mode .navbar {
+    background-color: #343a40;
+}
+
+.dark-mode .navbar h1 {
+    color: #ffffff;
+}
+
+.dark-mode .navbar-tool a i {
+    color: #ffffff;
+}
