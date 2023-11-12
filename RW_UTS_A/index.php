@@ -122,24 +122,41 @@ $query_tampil_data = mysqli_query($koneksi_db, 'select * from cuci_kendaraan');
     </div>
 
     <?php
-    if (isset($_POST['tombol_simpan'])) {
+        if (isset($_POST['tombol_simpan'])) {
+            $id_nota = $_POST['id_nota'];
+            $plat_nomor_kendaraan = $_POST['plat_nomor_kendaraan'];
+            $nama_pelanggan = $_POST['nama_pelanggan'];
+            $jenis_kendaraan = $_POST['jenis_kendaraan'];
+            $total_bayar = $_POST['total_bayar'];
+            $tanggal = $_POST['tanggal'];
+            $jenis_cuci = $_POST['jenis_cuci'];
 
-        $query_simpan = mysqli_query($koneksi_db, "insert into cuci_kendaraan 
-        values(
-            '" . $_POST['id_nota'] . "',
-            '" . $_POST['plat_nomor_kendaraan'] . "',
-            '" . $_POST['nama_pelanggan'] . "',
-            '" . $_POST['jenis_kendaraan'] . "',
-            '" . $_POST['total_bayar'] . "',
-            '" . $_POST['tanggal'] . "',
-            '" . $_POST['jenis_cuci'] . "'
-        )");
-        echo "<script>alert('Operasi berhasil');</script>";
-        echo "<meta http-equiv='refresh' content='0; url=index.php'>";
-    }
+            $query_simpan = mysqli_query($koneksi_db, "INSERT INTO cuci_kendaraan 
+            VALUES (
+                '$id_nota',
+                '$plat_nomor_kendaraan',
+                '$nama_pelanggan',
+                '$jenis_kendaraan',
+                '$total_bayar',
+                '$tanggal',
+                '$jenis_cuci'
+            )");
+
+            if ($query_simpan) {
+                echo "<script>alert('Operasi berhasil');</script>";
+                echo "<meta http-equiv='refresh' content='0; url=index.php'>";
+            } else {
+                $error_message = mysqli_error($koneksi_db);
+                if (strpos($error_message, "Duplicate entry") !== false) {
+                    echo "<script>alert('Gagal menyimpan data. ID Nota sudah ada');</script>";
+                } else {
+                    echo "<script>alert('Gagal menyimpan data. Error: $error_message');</script>";
+                }
+            }
+        }
 
     if (isset($_POST['tombol_edit'])) {
-		$id_asli = $_POST['id_asli'];
+        $id_asli = $_POST['id_asli'];
         $id_nota = $_POST['id_nota'];
         $plat_nomor_kendaraan = $_POST['plat_nomor_kendaraan'];
         $nama_pelanggan = $_POST['nama_pelanggan'];
@@ -147,16 +164,20 @@ $query_tampil_data = mysqli_query($koneksi_db, 'select * from cuci_kendaraan');
         $total_bayar = $_POST['total_bayar'];
         $tanggal = $_POST['tanggal'];
         $jenis_cuci = $_POST['jenis_cuci'];
-
+    
         $query_edit = "UPDATE cuci_kendaraan SET id_nota='$id_nota', plat_nomor_kendaraan='$plat_nomor_kendaraan', 
         nama_pelanggan='$nama_pelanggan', jenis_kendaraan='$jenis_kendaraan', total_bayar='$total_bayar', tanggal='$tanggal', jenis_cuci='$jenis_cuci' WHERE id_nota='$id_asli'";
-
+    
         if (mysqli_query($koneksi_db, $query_edit)) {
             echo "<script>alert('Data berhasil diubah.');</script>";
             echo "<meta http-equiv='refresh' content='0; url=index.php'>";
         } else {
-            echo "<script>alert('Gagal mengubah data.')</script>";
-            echo "<meta http-equiv='refresh' content='0; url=index.php'>";
+            $error_message = mysqli_error($koneksi_db);
+            if (strpos($error_message, "Duplicate entry") !== false) {
+                echo "<script>alert('Gagal mengubah data. ID Nota sudah ada');</script>";
+            } else {
+                echo "<script>alert('Gagal mengubah data. Error: $error_message')</script>";
+            }
         }
     }
     ?>
