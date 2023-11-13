@@ -44,5 +44,61 @@
             </div>
         </div>
     </div>
+
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <h2 href="">Form Entri</h2>
+                <form action="">
+                    <div class="row mb-3">
+                        <label for="" class="col-2">NIM</label>
+                        <div class="col-10">
+                        <input type="number" name="inputan_nim" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="" class="col-2">Nama</label>
+                        <div class="col-10">
+                        <input type="text" name="inputan_nama" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="" class="col-2">Tanggal Lahir</label>
+                        <div class="col-10">
+                        <input type="date" name="inputan_tgl" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="" class="col-2">Alamat</label>
+                        <div class="col-10">
+                        <textarea name="inputan_alamat" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="" class="col-2">Jenis Kelamin</label>
+                        <div class="col-10">
+                            <select name="inputan_jk" id="" class="form-control">
+                                <option value="pria">Pria</option>
+                                <option value="wanita">Wanita</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                    <button type="button" class="btn btn-success">Success</button>
+                    <button type="button" class="btn btn-danger">Danger</button>
+                    <button type="button" class="btn btn-warning">Warning</button>
+                    <button type="button" class="btn btn-info">Info</button>
+                    <button type="button" class="btn btn-light">Light</button>
+                    <button type="button" class="btn btn-dark">Dark</button>
+                    <button type="button" class="btn btn-link">Link</button>
+                </form>
+            </div>
+            <div class="col" style="background-color: orange;">
+                <p href="">Tabel Data</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

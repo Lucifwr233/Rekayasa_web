@@ -15,6 +15,7 @@ $query_tampil_data = mysqli_query($koneksi_db, 'select * from cuci_kendaraan');
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -40,6 +41,7 @@ $query_tampil_data = mysqli_query($koneksi_db, 'select * from cuci_kendaraan');
         <div class="row">
             <div class="col">
             <form id="form_login" method="post" enctype="multipart/form-data" class="p-4">
+            <h2 href="">Form Entri</h2>
                 <input type="hidden" id="edit_mode" name="edit_mode" value="0">
                 <div class="mb-3">
                     <input type="hidden" id="id_asli" name="id_asli">
@@ -88,8 +90,9 @@ $query_tampil_data = mysqli_query($koneksi_db, 'select * from cuci_kendaraan');
             </div>
 
             <div class="col-md-6">
-            <table class="table table-hover">
-                <tr>
+                <p href="">Data Pelanggan</p>
+                <table class="table table-hover">
+                    <tr>
                     <th scope="col">ID Nota</th>
                     <th>Plat Nomor Kendaraan</th>
                     <th>Nama Pelanggan</th>
@@ -110,8 +113,8 @@ $query_tampil_data = mysqli_query($koneksi_db, 'select * from cuci_kendaraan');
                     echo "<td>" . $row['tanggal'] . "</td>";
                     echo "<td>" . $row['jenis_cuci'] . "</td>";
                     echo "<td>
-                    <a href='?delete_id_nota=" . $row['id_nota'] . "' onclick=\"return confirm('Yakin hapus data?')\">Hapus</a> 
-                    <a href='#' onclick=\"editData('" . $row['id_nota'] . "', '" . $row['plat_nomor_kendaraan'] . "', '" . $row['nama_pelanggan'] . "', '" . $row['jenis_kendaraan'] . "', '" . $row['total_bayar'] . "', '" . $row['tanggal'] . "', '" . $row['jenis_cuci'] . "')\">Edit</a>
+                    <a href='?delete_id_nota=" . $row['id_nota'] . "' onclick=\"return confirm('Yakin hapus data?')\"><i class='fa-solid fa-trash' style='color: #000000;'></i></a>
+                    <a href='#' onclick=\"editData('" . $row['id_nota'] . "', '" . $row['plat_nomor_kendaraan'] . "', '" . $row['nama_pelanggan'] . "', '" . $row['jenis_kendaraan'] . "', '" . $row['total_bayar'] . "', '" . $row['tanggal'] . "', '" . $row['jenis_cuci'] . "')\"><i class='fa-solid fa-pen-to-square' style='color: #000000;'></i></a>
                     </td>";
                     echo "</tr>";
                 }

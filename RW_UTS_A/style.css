@@ -77,7 +77,7 @@ body {
     display: flex;
 }
 
-form {
+form,p{
     margin-top: 20%;
     border-radius: 20px;
     padding: 2em;
@@ -85,7 +85,6 @@ form {
 }
 
 table {
-    margin-top: 30%;
     width: 100%;
 }
 
