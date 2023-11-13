@@ -77,7 +77,7 @@ body {
     display: flex;
 }
 
-form,p{
+form ,p{
     margin-top: 20%;
     border-radius: 20px;
     padding: 2em;

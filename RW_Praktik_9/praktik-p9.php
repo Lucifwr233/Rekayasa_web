@@ -5,7 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <!-- Komponen data tabel -->
+    <!-- Jquery js -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <!-- data tables js -->
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap4.min.js"></script>
+    <!-- data tables css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap4.min.css">
+
+    <!-- membuat datatables -->
+    <script type="text/javascript">
+        $(document).ready(function(){$('#tabel_mahasiswa').DataTable();});
+    </script>
 </head>
 <body>
     <div class="container">
@@ -84,19 +99,76 @@
                             </select>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary">Primary</button>
-                    <button type="button" class="btn btn-secondary">Secondary</button>
-                    <button type="button" class="btn btn-success">Success</button>
-                    <button type="button" class="btn btn-danger">Danger</button>
-                    <button type="button" class="btn btn-warning">Warning</button>
-                    <button type="button" class="btn btn-info">Info</button>
-                    <button type="button" class="btn btn-light">Light</button>
-                    <button type="button" class="btn btn-dark">Dark</button>
-                    <button type="button" class="btn btn-link">Link</button>
+                    <button type="button" class="btn btn-primary">Primary <i class="fa-solid fa-arrow-right"></i> </button>
+                    <button type="button" class="btn btn-secondary">Secondary <i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" class="btn btn-success">Success <i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                    <button type="button" class="btn btn-danger">Danger <i class="fa-solid fa-film"></i></button>
+                    <button type="button" class="btn btn-warning"><i class="fa-solid fa-film"></i></button>
+                    <button type="button" class="btn btn-info"><i class="fa-solid fa-share"></i></button>
+                    <button type="button" class="btn btn-light"><i class="fa-solid fa-thumbs-up"></i></button>
+                    <button type="button" class="btn btn-dark"><i class="fa-brands fa-android"></i></button>
+                    <button type="button" class="btn btn-link"><i class="fa-solid fa-right-to-bracket"></i></button>
                 </form>
             </div>
-            <div class="col" style="background-color: orange;">
-                <p href="">Tabel Data</p>
+            <div class="col">
+                <h2 href="">Tabel Data</h2>
+                <table id="tabel_mahasiswa" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>NIM</th>
+                            <th>Nama</th>
+                            <th>Opsi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>202154023</td>
+                            <td>Eka Amin</td>
+                            <td>
+                            <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash "></i> </button>
+                            <button type="button" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i> </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>202154044</td>
+                            <td>Yusuf Amin</td>
+                            <td>
+                            <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash "></i> </button>
+                            <button type="button" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i> </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>202154012</td>
+                            <td>Joko Amin</td>
+                            <td>
+                            <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash "></i> </button>
+                            <button type="button" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i> </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>202154045</td>
+                            <td>Yeni Wulandari</td>
+                            <td>
+                            <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash "></i> </button>
+                            <button type="button" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i> </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>202154062</td>
+                            <td>Faisal Amin</td>
+                            <td>
+                            <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash "></i> </button>
+                            <button type="button" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i> </button>
+                            </td>danger
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
