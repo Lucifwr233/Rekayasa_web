@@ -6,7 +6,7 @@ class crud extends Model
 {
 	//crud tambah data
 	public function simpanPegawai($data) {
-		return $this->table('pegawai')->insert($data);
+		return $this->table('rw_ci_4_p10')->insert($data);
 	}
 
     //tamppil data pegawai

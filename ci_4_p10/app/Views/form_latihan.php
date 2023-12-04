@@ -102,7 +102,7 @@
                                         </div>
                                         <br>
                                         <!-- button -->
-                                            <button class="btn btn-success btn-lg btn-block" type="submit" <i class="fa fa-save"></i> Simpan </button>
+                                        <button class="btn btn-success btn-lg btn-block" type="submit"><i class="fa fa-save"></i> Simpan </button>
                                             <a href="<?= base_url('Latihan');?>" class="btn btn-danger btn-block  btn-lg"><i class="fa fa-refresh fa-spin"></i> Muat Ulang</a>
                                     </form>
                             </div>
