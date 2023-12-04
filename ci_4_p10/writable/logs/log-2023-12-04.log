@@ -1,0 +1,40 @@
+CRITICAL - 2023-12-04 01:45:01 --> Allowed fields must be specified for model: App\Models\crud
+#0 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\Model.php(1265): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\crud')
+#1 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\Model.php(735): CodeIgniter\Model->doProtectFields(Array)
+#2 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\app\Models\crud.php(9): CodeIgniter\Model->insert(Array)
+#3 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\app\Controllers\Latihan.php(33): App\Models\crud->simpanPegawai(Array)
+#4 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(918): App\Controllers\Latihan->simpanData()
+#5 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#6 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-12-04 01:45:15 --> Allowed fields must be specified for model: App\Models\crud
+#0 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\Model.php(1265): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\crud')
+#1 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\Model.php(735): CodeIgniter\Model->doProtectFields(Array)
+#2 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\app\Models\crud.php(9): CodeIgniter\Model->insert(Array)
+#3 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\app\Controllers\Latihan.php(33): App\Models\crud->simpanPegawai(Array)
+#4 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(918): App\Controllers\Latihan->simpanData()
+#5 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#6 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-12-04 01:47:25 --> Allowed fields must be specified for model: App\Models\crud
+#0 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\Model.php(1265): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\crud')
+#1 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\Model.php(735): CodeIgniter\Model->doProtectFields(Array)
+#2 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\app\Models\crud.php(9): CodeIgniter\Model->insert(Array)
+#3 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\app\Controllers\Latihan.php(33): App\Models\crud->simpanPegawai(Array)
+#4 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(918): App\Controllers\Latihan->simpanData()
+#5 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#6 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-12-04 01:49:28 --> Allowed fields must be specified for model: App\Models\crud
+#0 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\Model.php(1265): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\crud')
+#1 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\Model.php(735): CodeIgniter\Model->doProtectFields(Array)
+#2 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\app\Models\crud.php(9): CodeIgniter\Model->insert(Array)
+#3 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\app\Controllers\Latihan.php(33): App\Models\crud->simpanPegawai(Array)
+#4 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(918): App\Controllers\Latihan->simpanData()
+#5 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Latihan))
+#6 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

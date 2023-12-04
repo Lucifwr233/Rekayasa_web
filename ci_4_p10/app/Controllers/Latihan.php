@@ -18,4 +18,27 @@ class Latihan extends BaseController
 		return view('form_latihan.php', $data);
 	}
 
+	function simpanData()
+	{
+		$model_crud = new crud;
+		$data = [
+			'id_pegawai' => '',
+			'nama_pegawai' => $this->request->getPost('input_nama'),
+			'jenis_kelamin' => $this->request->getPost('input_jk'),
+			'alamat_pegawai' => $this->request->getPost('input_alamat')
+		];
+
+
+		//insert data baru dengan menggunakan models crud
+		$model_crud->simpanPegawai($data);
+
+		//notif untuk operasi berhasil
+		echo
+			'<script>
+				alert("Selamat, Tambah data berhasil");
+				window.location = "'.base_url('Latihan').'"
+			</script>';
+		
+	}
+
 }

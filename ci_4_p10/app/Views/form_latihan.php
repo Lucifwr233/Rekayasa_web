@@ -21,7 +21,7 @@
     <!-- import google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Flamenco&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Flamenco&family=Montserrat&family=Quicksand:wght@600&display=swap" rel="stylesheet">
 
     <!-- membuat datatables -->
     <script type="text/javascript">
@@ -32,8 +32,8 @@
         <br>
         <br>
             <center>
-            <h1 class="d-flex justify-content-center" style="font-family: Flamenco; "> <?= $judul?> </h1>
-            <h2 class="d-flex justify-content-center"> <?= $sub_judul ?> </h2>
+            <h1 class="d-flex justify-content-center" style="font-family: Quicksand; "> <?= $judul?> </h1>
+            <h2 class="d-flex justify-content-center" style="font-family: Montserrat; "> <?= $sub_judul ?> </h2>
             </center>
 
         <br>
@@ -42,61 +42,71 @@
             <div class="container">
             <div class="row">
                 <div class="col-6">
+                    <div class="card">
                         <div class="card-header">
-                            <h1 class="" style="font-family: Bebas Neue; "> <?= $judul_tabel?> </h1>
+                            <h1 class="card-title" style="font-family: Bebas Neue; "> <?= $judul_tabel?> </h1>
                         </div>
-                        <table class="table table-bordered" id="tabel_mahasiswa">
-                            <thead>
-                                <th>No.</th>
-                                <th>Nama Pegawai</th>
-                                <th>Jenis Kelamin</th>
-                                <th>Alamat</th>
-                            </thead>
-                            <tbody>
-                                <?php $nomor=1; foreach ($data_pegawai as $pegawai) {?>
-                                <tr>
-                                    <td><?= $nomor?></td>
-                                    <td><?= $pegawai['nama_pegawai']?></td>
-                                    <td><?= $pegawai['jenis_kelamin']?></td>
-                                    <td><?= $pegawai['alamat_pegawai']?></td>
-                                </tr>
-                                <?php } ?>
-                            </tbody>
-                        </table>
+                        <div class="card-body">
+                            <table class="table table-bordered" id="tabel_mahasiswa">
+                                <thead>
+                                    <th>No.</th>
+                                    <th>Nama Pegawai</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>Alamat</th>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    use App\Controllers\Latihan;
+                                    $nomor=1; foreach ($data_pegawai as $pegawai) {?>
+                                    <tr>
+                                        <td><?= $nomor?></td>
+                                        <td><?= $pegawai['nama_pegawai']?></td>
+                                        <td><?= $pegawai['jenis_kelamin']?></td>
+                                        <td><?= $pegawai['alamat_pegawai']?></td>
+                                    </tr>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                     </div>
                 <br>
-                <div class="col-6">
-                    <div class="card-header">
-                        <h1 class="" style="font-family: Bebas Neue; "> <?= $judul_form?> </h1>
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h1 class="" style="font-family: Bebas Neue; "> <?= $judul_form?> </h1>
+                            </div>
+                                <div class="card-body">
+                                    <!-- form inputan -->
+                                    <form action="<?= base_url('Latihan/simpanData') ?>" method="post">
+                                        <div class="row mb-2">
+                                            <label class="col-4" for="">Nama Pegawai</label>
+                                                <div class="col-8">
+                                                <input type="text" name="input_nama" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-4" for="">Jenis Kelamin</label>
+                                            <div class="col-8">
+                                                <select name="input_jk" id="" class="form-control" required>
+                                                <option value="Pria">Pria</option>
+                                                <option value="Wanita">Wanita</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-4" for="">Alamat</label>
+                                            <div class="col-8">
+                                                <textarea name="input_alamat" id="" class="form-control" required></textarea>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <!-- button -->
+                                            <button class="btn btn-success btn-lg btn-block" type="submit" <i class="fa fa-save"></i> Simpan </button>
+                                            <a href="<?= base_url('Latihan');?>" class="btn btn-danger btn-block  btn-lg"><i class="fa fa-refresh fa-spin"></i> Muat Ulang</a>
+                                    </form>
+                            </div>
                     </div>
-                        <!-- form inputan -->
-                        <form action="" method="post">
-                            <div class="row mb-2">
-                                <label class="col-4" for="">Nama Pegawai</label>
-                                    <div class="col-8">
-                                    <input type="text" name="input_nama" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <label class="col-4" for="">Jenis Kelamin</label>
-                                <div class="col-8">
-                                    <select name="input_jk" id="" class="form-control">
-                                    <option value="Pria">Pria</option>
-                                    <option value="Wanita">Wanita</option>
-                                </select>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <label class="col-4" for="">Alamat</label>
-                                <div class="col-8">
-                                    <textarea name="input_alamat" id="" class="form-control"></textarea>
-                                </div>
-                            </div>
-                            <br>
-                            <!-- button -->
-                            <button class="btn btn-success btn-lg btn-block" type="button"><i class="fa fa-save"></i> Simpan </button>
-                            <a href="<?= base_url('Latihan');?>" class="btn btn-danger btn-block  btn-lg"><i class="fa fa-refresh fa-spin"></i> Muat Ulang</a>
-                        </form>
                 </div>
             </div>
             <br>

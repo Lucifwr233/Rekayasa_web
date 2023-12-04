@@ -4,6 +4,11 @@ use CodeIgniter\Model;
 
 class crud extends Model
 {
+	//crud tambah data
+	public function simpanPegawai($data) {
+		return $this->table('pegawai')->insert($data);
+	}
+
     //tamppil data pegawai
 	public function tampilpegawai()
 	{
