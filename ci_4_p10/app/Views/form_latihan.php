@@ -53,6 +53,7 @@
                                     <th>Nama Pegawai</th>
                                     <th>Jenis Kelamin</th>
                                     <th>Alamat</th>
+                                    <th>Action</th>
                                 </thead>
                                 <tbody>
                                     <?php
@@ -63,8 +64,19 @@
                                         <td><?= $pegawai['nama_pegawai']?></td>
                                         <td><?= $pegawai['jenis_kelamin']?></td>
                                         <td><?= $pegawai['alamat_pegawai']?></td>
+                                        <td>
+                                            <!-- Delete button  -->
+                                            <a href="<?= base_url('Latihan/hapusData/' . $pegawai['id_pegawai']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Anda yakin ingin menghapus data ini?')">
+                                                <i class="fa fa-trash"></i> Delete
+                                            </a>
+
+                                            <!-- Edit button -->
+                                            <button id="btnEdit" class="btn btn-warning btn-sm" onclick="editData('<?= $pegawai['id_pegawai'] ?>', '<?= $pegawai['nama_pegawai'] ?>', '<?= $pegawai['jenis_kelamin'] ?>', '<?= $pegawai['alamat_pegawai'] ?>')">
+                                                <i class="fa fa-edit"></i> Edit
+                                            </button>
+                                        </td>
                                     </tr>
-                                    <?php } ?>
+                                    <?php $nomor++; } ?>
                                 </tbody>
                             </table>
                         </div>
@@ -79,6 +91,12 @@
                                 <div class="card-body">
                                     <!-- form inputan -->
                                     <form action="<?= base_url('Latihan/simpanData') ?>" method="post">
+                                        <div class="row mb-2" style="display: none;">
+                                            <label class="col-4" for="">ID Pegawai (for edit)</label>
+                                            <div class="col-8">
+                                                <input type="text" name="id_edit" class="form-control" readonly>
+                                            </div>
+                                        </div>
                                         <div class="row mb-2">
                                             <label class="col-4" for="">Nama Pegawai</label>
                                                 <div class="col-8">
@@ -103,7 +121,13 @@
                                         <br>
                                         <!-- button -->
                                         <button class="btn btn-success btn-lg btn-block" type="submit"><i class="fa fa-save"></i> Simpan </button>
-                                            <a href="<?= base_url('Latihan');?>" class="btn btn-danger btn-block  btn-lg"><i class="fa fa-refresh fa-spin"></i> Muat Ulang</a>
+                                        <a href="<?= base_url('Latihan');?>" class="btn btn-danger btn-block  btn-lg"><i class="fa fa-refresh fa-spin"></i> Muat Ulang</a>
+                                        <button href="<?= base_url('Latihan/updateData/');?>" id="btnUpdate" class="btn btn-warning btn-lg btn-block" style="display: none;">
+                                            <i class="fa fa-edit"></i> Update Data
+                                        </button>
+                                        <button id="btnBatal" class="btn btn-secondary btn-lg btn-block" type="button" onclick="batalEdit()" style="display: none;">
+                                            Batal
+                                        </button>
                                     </form>
                             </div>
                     </div>
@@ -122,34 +146,30 @@
     </body>
 
     <script type="text/javascript">
-        function myFunction() {
-            var element = document.body;
-            element.classList.toggle("dark-mode");
+        function editData(id, nama, jk, alamat) {
+            document.getElementsByName('id_edit')[0].value = id;
+            document.getElementsByName('input_nama')[0].value = nama;
+            document.getElementsByName('input_jk')[0].value = jk;
+            document.getElementsByName('input_alamat')[0].value = alamat;
+
+            // Display the buttons for editing
+            document.getElementById('btnEdit').style.display = 'none';
+            document.getElementById('btnUpdate').style.display = 'inline-block';
+            document.getElementById('btnBatal').style.display = 'inline-block';
         }
 
-        const darkModeToggle = document.getElementById("dark-mode-toggle");
-        const darkModeIcon = document.getElementById("dark-mode-icon");
-        const body = document.body;
-        let isDarkMode = false;
+        function batalEdit() {
+            document.getElementsByName('id_edit')[0].value = '';
+            document.getElementsByName('input_nama')[0].value = '';
+            document.getElementsByName('input_jk')[0].value = '';
+            document.getElementsByName('input_alamat')[0].value = '';
 
-        darkModeToggle.addEventListener("click", () => {
-            isDarkMode = !isDarkMode;
-            body.classList.toggle("dark-mode", isDarkMode);
-            updateDarkModeIcon();
-            animateDarkModeToggle();
-        });
-
-        function updateDarkModeIcon() {
-        const darkModeIcon = document.getElementById("dark-mode-icon");
-
-        if (isDarkMode) {
-            darkModeIcon.classList.remove("fa-moon");
-            darkModeIcon.classList.add("fa-sun");
-        } else {
-            darkModeIcon.classList.remove("fa-sun");
-            darkModeIcon.classList.add("fa-moon");
+            // Hide the buttons for editing
+            document.getElementById('btnEdit').style.display = 'inline-block';
+            document.getElementById('btnUpdate').style.display = 'none';
+            document.getElementById('btnBatal').style.display = 'none';
         }
-    }
+
 
         function toggleDarkMode() {
             isDarkMode = !isDarkMode;

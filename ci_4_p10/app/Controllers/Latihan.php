@@ -18,6 +18,7 @@ class Latihan extends BaseController
 		return view('form_latihan.php', $data);
 	}
 
+	//fungsi simpan data
 	function simpanData()
 	{
 		$model_crud = new crud;
@@ -40,5 +41,41 @@ class Latihan extends BaseController
 			</script>';
 		
 	}
+
+		//fungsi hapus data
+		public function hapusData($id)
+		{
+			$model_crud = new crud;
+
+			// Hapus data berdasarkan ID
+			$model_crud->hapusPegawai($id);
+
+			// Notif untuk operasi berhasil
+			echo
+				'<script>
+					alert("Selamat, Hapus data berhasil");
+					window.location = "'.base_url('Latihan').'"
+				</script>';
+		}
+
+		public function updateData()
+		{
+			$model_crud = new crud;
+			
+			// Ambil data dari form
+			$id = $this->request->getPost('id_edit');
+			$nama = $this->request->getPost('input_nama');
+			$jk = $this->request->getPost('input_jk');
+			$alamat = $this->request->getPost('input_alamat');
+	
+			// Update data berdasarkan ID
+			$model_crud->updatePegawai($id, $nama, $jk, $alamat);
+	
+			// Notif untuk operasi berhasil
+			echo '<script>
+					alert("Selamat, Update data berhasil");
+					window.location = "' . base_url('Latihan') . '"
+				  </script>';
+		}
 
 }
