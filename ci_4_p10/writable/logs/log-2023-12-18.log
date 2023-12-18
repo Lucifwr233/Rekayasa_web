@@ -1,0 +1,63 @@
+CRITICAL - 2023-12-18 00:29:56 --> Call to undefined method App\Models\crudsendiri::tampilcuci
+#0 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\app\Controllers\LatihanSendiri.php(17): CodeIgniter\Model->__call('tampilcuci', Array)
+#1 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(918): App\Controllers\LatihanSendiri->index()
+#2 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LatihanSendiri))
+#3 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-18 00:30:03 --> Call to undefined method App\Models\crudsendiri::tampilcuci
+#0 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\app\Controllers\LatihanSendiri.php(17): CodeIgniter\Model->__call('tampilcuci', Array)
+#1 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(918): App\Controllers\LatihanSendiri->index()
+#2 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LatihanSendiri))
+#3 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-18 00:36:14 --> Call to undefined method App\Models\crudsendiri::simpanPegawai
+#0 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\app\Controllers\LatihanSendiri.php(36): CodeIgniter\Model->__call('simpanPegawai', Array)
+#1 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(918): App\Controllers\LatihanSendiri->simpanData()
+#2 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LatihanSendiri))
+#3 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-18 01:15:29 --> Call to undefined method App\Models\crudsendiri::hapusdata
+#0 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\app\Controllers\LatihanSendiri.php(53): CodeIgniter\Model->__call('hapusdata', Array)
+#1 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(918): App\Controllers\LatihanSendiri->hapusData('10')
+#2 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LatihanSendiri))
+#3 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-18 01:45:46 --> Call to undefined method App\Models\crudsendiri::ubahPegawai
+#0 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\app\Controllers\LatihanSendiri.php(40): CodeIgniter\Model->__call('ubahPegawai', Array)
+#1 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(918): App\Controllers\LatihanSendiri->simpanData()
+#2 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LatihanSendiri))
+#3 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-18 01:45:55 --> Call to undefined method App\Models\crudsendiri::ubahPegawai
+#0 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\app\Controllers\LatihanSendiri.php(40): CodeIgniter\Model->__call('ubahPegawai', Array)
+#1 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(918): App\Controllers\LatihanSendiri->simpanData()
+#2 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LatihanSendiri))
+#3 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-18 01:48:10 --> Call to undefined method App\Models\crudsendiri::ubahPegawai
+#0 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\app\Controllers\LatihanSendiri.php(40): CodeIgniter\Model->__call('ubahPegawai', Array)
+#1 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(918): App\Controllers\LatihanSendiri->simpanData()
+#2 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LatihanSendiri))
+#3 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-18 01:48:38 --> Call to undefined method App\Models\crudsendiri::ubahPegawai
+#0 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\app\Controllers\LatihanSendiri.php(40): CodeIgniter\Model->__call('ubahPegawai', Array)
+#1 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(918): App\Controllers\LatihanSendiri->simpanData()
+#2 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LatihanSendiri))
+#3 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-18 01:51:06 --> Call to undefined method App\Models\crudsendiri::ubahPegawai
+#0 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\app\Controllers\LatihanSendiri.php(40): CodeIgniter\Model->__call('ubahPegawai', Array)
+#1 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(918): App\Controllers\LatihanSendiri->simpanData()
+#2 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LatihanSendiri))
+#3 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\rw\Rekayasa_web\ci_4_p10\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
