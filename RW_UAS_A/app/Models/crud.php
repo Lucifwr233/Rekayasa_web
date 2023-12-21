@@ -10,19 +10,19 @@ class crud extends Model
         return $this->db->table('user')->insert($data);
     }
 
-    public function simpanmahasiswa($data)
+    public function simpanpelanggan($data)
     {
-        return $this->db->table('mahasiswa')->insert($data);
+        return $this->db->table('pelanggan')->insert($data);
     }
 
-    public function simpandosen($data)
+    public function simpankendaraan($data)
     {
-        return $this->db->table('dosen')->insert($data);
+        return $this->db->table('kendaraan')->insert($data);
     }
 
-    public function simpanjadwalkuliah($data)
+    public function simpantransaksi($data)
     {
-        return $this->db->table('jadwal_kuliah')->insert($data);
+        return $this->db->table('transaksi_cuci')->insert($data);
     }
 
 
@@ -33,19 +33,19 @@ class crud extends Model
         return $this->db->table('user')->select('*')->orderBy('id_user', 'Desc')->get()->getResultArray();
     }
 
-    public function tampilmahasiswa()
+    public function tampilpelanggan()
     {
-        return $this->db->table('mahasiswa')->select('*')->orderBy('id_mahasiswa', 'Desc')->get()->getResultArray();
+        return $this->db->table('pelanggan')->select('*')->orderBy('id_mahasiswa', 'Desc')->get()->getResultArray();
     }
 
-    public function tampildosen()
+    public function tampilkendaraan()
     {
-        return $this->db->table('dosen')->select('*')->orderBy('id_dosen', 'Desc')->get()->getResultArray();
+        return $this->db->table('kendaraan')->select('*')->orderBy('id_dosen', 'Desc')->get()->getResultArray();
     }
 
-    public function tampiljadwalkuliah()
+    public function tampiltransaksi()
     {
-        return $this->db->query("SELECT * FROM jadwal_kuliah, mahasiswa, dosen where jadwal_kuliah.id_mahasiswa = mahasiswa.id_mahasiswa and jadwal_kuliah.id_dosen = dosen.id_dosen ORDER BY id_jadwalkuliah DESC ")->getResultArray();
+        return $this->db->query("SELECT * FROM transaksi_cuci, pelanggan, kendaraan where jadwal_kuliah.id_mahasiswa = mahasiswa.id_mahasiswa and jadwal_kuliah.id_dosen = dosen.id_dosen ORDER BY id_jadwalkuliah DESC ")->getResultArray();
     }
 
 
