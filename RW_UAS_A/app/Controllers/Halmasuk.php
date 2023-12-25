@@ -17,7 +17,7 @@ class Halmasuk extends BaseController
     public function index()
     {
         $data['judul']          = 'Halaman Masuk';
-        $data['sub_judul']      = 'Selamat datang di Aplikasi Ci4';
+        $data['sub_judul']      = 'Selamat datang di Data Cuci Kendaraan';
         
         if(empty($this->session->get('id_user'))) {
             echo view('hal-masuk', $data);
