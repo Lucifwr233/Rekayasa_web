@@ -22,7 +22,7 @@ class App extends BaseConfig
 	|
 	*/
 	//public $baseURL = 'http://localhost:8080/';
-	public $baseURL = 'http://localhost/RW/rekayasa_web/RW_UAS_A/';
+	public $baseURL = 'http://localhost/RW_UAS_A/';
 
 	/*
 	|--------------------------------------------------------------------------
