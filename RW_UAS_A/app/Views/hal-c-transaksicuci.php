@@ -80,11 +80,11 @@
                         foreach ($data_transaksicuci as $transaksicuci) { ?>
                             <tr style="font-size: smaller;">
                                 <td><?= $no++ ?></td>
-                                <td><?= $transaksicuci['Id_transaksi'] ?></td>
-                                <td><?= $transaksicuci['Id_kendaraan'] ?></td>
-                                <td><?= $transaksicuci['Tanggal_cuci'] ?></td>
-                                <td><?= $transaksicuci['Jenis_cuci'] ?></td>
-                                <td><?= $transaksicuci['Total_biaya'] ?></td>
+                                <td><?= $transaksicuci['ID_Transaksi'] ?></td>
+                                <td><?= $transaksicuci['ID_Kendaraan'] ?></td>
+                                <td><?= $transaksicuci['Tanggal_Cuci'] ?></td>
+                                <td><?= $transaksicuci['Jenis_Cuci'] ?></td>
+                                <td><?= $transaksicuci['Total_Biaya'] ?></td>
                                 <td>
                                     <a href="<?= base_url('haltransaksicuci/detaildata/' . $transaksicuci['id_transaksi']) ?>" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
                                     <a onclick="return confirm('Yakin hapus ?')" href="<?= base_url('haltransaksicuci/hapusdata/' . $transaksicuci['id_transaksi']) ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
