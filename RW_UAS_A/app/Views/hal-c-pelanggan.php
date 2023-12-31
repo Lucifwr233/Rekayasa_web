@@ -8,30 +8,23 @@
                     <input class="form-control" type="hidden" name="inputan_id_pelanggan" value="<?= $id_pelanggan ?>">
 
                     <div class="row mb-2">
-                        <label class="col-4">ID Pelanggan</label>
-                        <div class="col-8">
-                            <input class="form-control" type="text" name="inputan_id_pelanggan" required value="<?= $detail_pelanggan->id_pelanggan ?>">
-                        </div>
-                    </div>
-
-                    <div class="row mb-2">
                         <label class="col-4">Nama</label>
                         <div class="col-8">
-                            <input class="form-control" type="text" name="inputan_nama" required value="<?= $detail_pelanggan->nama_pelanggan ?>">
+                            <input class="form-control" type="text" name="inputan_nama" required value="<?= $detail_pelanggan->Nama_Pelanggan ?>">
                         </div>
                     </div>
 
                     <div class="row mb-2">
                         <label class="col-4">Alamat</label>
                         <div class="col-8">
-                            <textarea class="form-control" name="inputan_alamat" required><?= $detail_pelanggan->alamat_pelanggan ?></textarea>
+                            <textarea class="form-control" name="inputan_alamat" required><?= $detail_pelanggan->Alamat ?></textarea>
                         </div>
                     </div>
                     
                     <div class="row mb-2">
                         <label class="col-4">Nomor Telepon</label>
                         <div class="col-8">
-                            <textarea class="form-control" name="inputan_telp" required><?= $detail_pelanggan->inputan_telp ?></textarea>
+                            <textarea class="form-control" name="inputan_telp" required><?= $detail_pelanggan->Nomor_Telepon ?></textarea>
                         </div>
                     </div>
                     <!-- Add more fields as needed -->
@@ -70,8 +63,8 @@
                             <td><?= $pelanggan['Alamat'] ?></td>
                             <td><?= $pelanggan['Nomor_Telepon'] ?></td>
                             <td>
-                                <a href="<?= base_url('halpelanggan/detaildata/'.$pelanggan['id_pelanggan']) ?>" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
-                                <a onclick="return confirm('Yakin hapus ?')" href="<?= base_url('halpelanggan/hapusdata/'.$pelanggan['id_pelanggan']) ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+                                <a href="<?= base_url('halpelanggan/detaildata/'.$pelanggan['ID_Pelanggan']) ?>" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
+                                <a onclick="return confirm('Yakin hapus ?')" href="<?= base_url('halpelanggan/hapusdata/'.$pelanggan['ID_Pelanggan']) ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                         <?php } ?>

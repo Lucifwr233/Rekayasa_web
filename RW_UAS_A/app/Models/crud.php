@@ -107,4 +107,16 @@ class Crud extends Model
     {
         return $this->db->table('user')->delete(array('id_user' => $id_user));
     }
+
+    public function laporantransaksi($tgl_mulai, $tgl_selesai)
+    {
+        return $this->db->table('transaksi_cuci')
+            ->select('transaksi_cuci.*, kendaraan.Jenis_Kendaraan as Jenis_Kendaraan')
+            ->join('kendaraan', 'kendaraan.ID_Kendaraan = transaksi_cuci.ID_Kendaraan')
+            ->where('transaksi_cuci.Tanggal_Cuci >=', $tgl_mulai)
+            ->where('transaksi_cuci.Tanggal_Cuci <=', $tgl_selesai)
+            ->orderBy('transaksi_cuci.ID_Transaksi', 'ASC')
+            ->get()
+            ->getResultArray();
+    }
 }

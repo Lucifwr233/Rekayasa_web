@@ -45,11 +45,9 @@ class Halpelanggan extends BaseController
         $id_pelanggan = $this->request->getPost('inputan_id_pelanggan');
 
         $data = [
-            'ID_Pelanggan'      => $this->request->getPost('inputan_id_pelanggan'),
             'Nama_Pelanggan'    => $this->request->getPost('inputan_nama'),
-            'Alamat'  => $this->request->getPost('inputan_alamat'),
-            'Nomor_Telepon'  => $this->request->getPost('inputan_telp'),
-            // Add more fields as needed
+            'Alamat'            => $this->request->getPost('inputan_alamat'),
+            'Nomor_Telepon'     => $this->request->getPost('inputan_telp')
         ];
 
         if (empty($id_pelanggan)) {

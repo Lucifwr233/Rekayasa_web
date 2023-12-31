@@ -7,31 +7,24 @@
 
                     <input class="form-control" type="hidden" name="inputan_id_kendaraan" value="<?= $id_kendaraan ?>">                    
 
-                    <!-- Add your input fields for the "kendaraan" table here -->
-                    <div class="row mb-2">
-                        <label class="col-4">ID Kendaraan</label>
-                        <div class="col-8">
-                            <input class="form-control" type="text" name="inputan_idkendaraan" required value="<?= $detail_kendaraan->id_kendaraan ?>">
-                        </div>
-                    </div>
                     <div class="row mb-2">
                         <label class="col-4">ID Pelanggan</label>
                         <div class="col-8">
-                            <input class="form-control" type="text" name="inputan_idpelanggan" required value="<?= $detail_kendaraan->id_pelanggan ?>">
+                            <input class="form-control" type="text" name="inputan_idpelanggan" required value="<?= $detail_kendaraan->ID_Pelanggan ?>">
                         </div>
                     </div>
                     
                     <div class="row mb-2">
                         <label class="col-4">Jenis Kendaraan</label>
                         <div class="col-8">
-                            <input class="form-control" type="text" name="inputan_jeniskendaraan" required value="<?= $detail_kendaraan->jenis_kendaraan ?>">
+                            <input class="form-control" type="text" name="inputan_jeniskendaraan" required value="<?= $detail_kendaraan->Jenis_Kendaraan ?>">
                         </div>
                     </div>
 
                     <div class="row mb-2">
                         <label class="col-4">Nomor Plat</label>
                         <div class="col-8">
-                            <input class="form-control" type="text" name="inputan_nomor_plat" required value="<?= $detail_kendaraan->nomor_plat ?>">
+                            <input class="form-control" type="text" name="inputan_nomor_plat" required value="<?= $detail_kendaraan->Nomor_Plat ?>">
                         </div>
                     </div>
                     <!-- ... Add other fields ... -->
@@ -69,8 +62,8 @@
                             <td><?= $kendaraan['Jenis_Kendaraan'] ?></td>
                             <td><?= $kendaraan['Nomor_Plat'] ?></td>
                             <td>
-                                <a href="<?= base_url('halkendaraan/detaildata/'.$kendaraan['id_kendaraan']) ?>" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
-                                <a onclick="return confirm('Yakin hapus ?')" href="<?= base_url('halkendaraan/hapusdata/'.$kendaraan['id_kendaraan']) ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+                                <a href="<?= base_url('halkendaraan/detaildata/'.$kendaraan['ID_Kendaraan']) ?>" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
+                                <a onclick="return confirm('Yakin hapus ?')" href="<?= base_url('halkendaraan/hapusdata/'.$kendaraan['ID_Kendaraan']) ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                             </td>
                         </tr>
                         <?php } ?>

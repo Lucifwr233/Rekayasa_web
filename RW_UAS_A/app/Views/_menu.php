@@ -7,9 +7,9 @@
             <div class="card-body mx-auto">
                 <?php if($session->get('hak_akses') == 'Admin'){ ?>
                     <a href="<?= base_url('halberanda') ?>" class="btn btn-primary btn-sm"><span class="fa fa-home"></span> <br/>Beranda</a>
-                    <a href="<?= base_url('haltransaksicuci') ?>" class="btn btn-info btn-sm"><span class="fa fa-car"></span> <br/>Transaksi Cuci</a>
                     <a href="<?= base_url('halpelanggan') ?>" class="btn btn-secondary btn-sm"><span class="fa fa-user"></span> <br/>Data Pelanggan</a>
                     <a href="<?= base_url('halkendaraan') ?>" class="btn btn-secondary btn-sm"><span class="fa fa-car"></span> <br/>Data Kendaraan</a>
+                    <a href="<?= base_url('haltransaksicuci') ?>" class="btn btn-info btn-sm"><span class="fa fa-car"></span> <br/>Transaksi Cuci</a>
                     <a href="<?= base_url('haluser') ?>" class="btn btn-secondary btn-sm"><span class="fa fa-users"></span> <br/>Data User</a>
                     <a href="<?= base_url('hallaporan') ?>" class="btn btn-success btn-sm"><span class="fa fa-list-alt"></span> <br/>Laporan</a>
                     <a href="<?= base_url('halmasuk/keluar') ?>" onclick="return confirm('Kamu yakin keluar dari sistem ?')" class="btn btn-danger btn-sm"><span class="fa fa-bookmark"></span> <br/>Keluar</a>

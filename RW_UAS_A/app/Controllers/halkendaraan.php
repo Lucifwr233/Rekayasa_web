@@ -45,10 +45,9 @@ class Halkendaraan extends BaseController
         $id_kendaraan = $this->request->getPost('inputan_id_kendaraan');
 
         $data = [
-            'ID_Kendaraan'  => $this->request->getPost('inputan_idkendaraan'),
             'ID_Pelanggan'  => $this->request->getPost('inputan_idpelanggan'),
             'Jenis_Kendaraan'        => $this->request->getPost('inputan_jeniskendaraan'),
-            'nomor_plat'  => $this->request->getPost('inputan_nomor_plat'),
+            'Nomor_Plat'  => $this->request->getPost('inputan_nomor_plat')
             // Add other fields according to your "kendaraan" table
         ];
 

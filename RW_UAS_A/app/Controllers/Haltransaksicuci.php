@@ -46,11 +46,11 @@ class Haltransaksicuci extends BaseController
         $id_transaksi = $this->request->getPost('inputan_id_transaksi');
 
         $data = [
-            'tanggal_cuci'      => $this->request->getPost('inputan_tanggal_cuci'),
-            'jenis_cuci'        => $this->request->getPost('inputan_jenis_cuci'),
-            'total_biaya'       => $this->request->getPost('inputan_total_biaya'),
-            'id_kendaraan'      => $this->request->getPost('inputan_id_kendaraan'),
-            'id_transaksi'      => $this->request->getPost('inputan_id_transaksi'),
+            'ID_Kendaraan'      => $this->request->getPost('inputan_id_kendaraan'),
+            'Tanggal_Cuci'      => $this->request->getPost('inputan_tanggal_cuci'),
+            'Tipe_Cuci'        => $this->request->getPost('inputan_jenis_cuci'),
+            'Total_Biaya'       => $this->request->getPost('inputan_total_biaya'),
+
         ];
 
         if (empty($id_transaksi)) {

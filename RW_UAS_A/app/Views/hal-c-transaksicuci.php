@@ -11,33 +11,28 @@
                     <input class="form-control" type="hidden" name="inputan_id_transaksi" value="<?= $id_transaksi ?>">
 
                     <!-- Add fields for id_kendaraan and id_transaksi -->
-                    <div class="row mb-2">
-                        <label class="col-4">ID Transaksi</label>
-                        <div class="col-8">
-                            <input class="form-control" type="text" name="inputan_id_transaksi" required>
-                        </div>
-                    </div>
+
                     <div class="row mb-2">
                         <label class="col-4">ID Kendaraan</label>
                         <div class="col-8">
-                            <input class="form-control" type="text" name="inputan_id_kendaraan" required>
+                            <input class="form-control" type="text" name="inputan_id_kendaraan" required value="<?= $detail_transaksicuci->ID_Kendaraan ?>">
                         </div>
                     </div>
 
                     <div class="row mb-2">
                         <label class="col-4">Tanggal Cuci</label>
                         <div class="col-8">
-                            <input class="form-control" type="date" name="inputan_tanggal_cuci" required>
+                            <input class="form-control" type="date" name="inputan_tanggal_cuci" required value="<?= $detail_transaksicuci->Tanggal_Cuci ?>">
                         </div>
                     </div>
 
                     <div class="row mb-2">
                         <label class="col-4">Jenis Cuci</label>
                         <div class="col-8">
-                            <select class="form-control" name="inputan_jenis_cuci" required>
+                            <select class="form-control" name="inputan_jenis_cuci" id="inputan_jenis_cuci" required onchange="updateTotalBiaya()">
                                 <option value=""> -- Silahkan Pilih --</option>
-                                <option value="Cuci Kilat">Cuci Kilat</option>
-                                <option value="Cuci Lambat">Cuci Lambat</option>
+                                <option value="Cuci Kilat" <?php if ($detail_transaksicuci->Tipe_Cuci == 'Cuci Kilat') echo 'selected'; ?>>Cuci Kilat</option>
+                                <option value="Cuci Lambat" <?php if ($detail_transaksicuci->Tipe_Cuci == 'Cuci Lambat') echo 'selected'; ?>>Cuci Lambat</option>
                             </select>
                         </div>
                     </div>
@@ -45,7 +40,7 @@
                     <div class="row mb-2">
                         <label class="col-4">Total Biaya</label>
                         <div class="col-8">
-                            <input class="form-control" type="text" name="inputan_total_biaya" required>
+                            <input class="form-control" type="text" name="inputan_total_biaya" id="inputan_total_biaya" required value="<?= $detail_transaksicuci->Total_Biaya ?>">
                         </div>
                     </div>
 
@@ -83,11 +78,11 @@
                                 <td><?= $transaksicuci['ID_Transaksi'] ?></td>
                                 <td><?= $transaksicuci['ID_Kendaraan'] ?></td>
                                 <td><?= $transaksicuci['Tanggal_Cuci'] ?></td>
-                                <td><?= $transaksicuci['Jenis_Cuci'] ?></td>
+                                <td><?= $transaksicuci['Tipe_Cuci'] ?></td>
                                 <td><?= $transaksicuci['Total_Biaya'] ?></td>
                                 <td>
-                                    <a href="<?= base_url('haltransaksicuci/detaildata/' . $transaksicuci['id_transaksi']) ?>" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
-                                    <a onclick="return confirm('Yakin hapus ?')" href="<?= base_url('haltransaksicuci/hapusdata/' . $transaksicuci['id_transaksi']) ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+                                    <a href="<?= base_url('haltransaksicuci/detaildata/' . $transaksicuci['ID_Transaksi']) ?>" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
+                                    <a onclick="return confirm('Yakin hapus ?')" href="<?= base_url('haltransaksicuci/hapusdata/' . $transaksicuci['ID_Transaksi']) ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -96,4 +91,27 @@
             </div>
         </div>
     </div>
+
+    <script>
+    function updateTotalBiaya() {
+        var jenisCuci = document.getElementById('inputan_jenis_cuci').value;
+        var totalBiayaField = document.getElementById('inputan_total_biaya');
+
+        // Set default value to 0
+        var totalBiaya = "0";
+
+        // Calculate total biaya based on the selected jenisCuci
+        if (jenisCuci === 'Cuci Kilat') {
+            totalBiaya = "Rp 40.000";
+        } else if (jenisCuci === 'Cuci Lambat') {
+            totalBiaya = "Rp 20.000";
+        }
+
+        // Set the calculated totalBiaya to the input field
+        totalBiayaField.value = totalBiaya;
+    }
+
+    // Call the function when the page loads
+    window.onload = updateTotalBiaya;
+</script>
 </div>
