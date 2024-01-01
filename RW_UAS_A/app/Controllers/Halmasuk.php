@@ -18,7 +18,7 @@ class Halmasuk extends BaseController
 
     public function index()
     {
-        $data['judul']     = 'Halaman Masuk';
+        $data['judul']     = 'Selamat Datang Ke Cuci 👋';
         $data['sub_judul'] = 'Selamat datang di Data Cuci Kendaraan';
 
         if (empty($this->session->get('id_user'))) {
