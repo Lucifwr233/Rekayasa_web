@@ -20,7 +20,7 @@ class Halpelanggan extends BaseController
     {
         $data['content']            = 'hal-c-pelanggan';
         $data['judul']              = 'Rekayasa Web (Aplikasi UAS)';
-        $data['sub_judul']          = 'Selamat datang di halaman pelanggan';
+        $data['sub_judul']          = 'Selamat datang di halaman Pelanggan !';
         $data['data_pelanggan']     = $this->model_crud->tampilpelanggan();
 
         echo view('_applayout', $data);

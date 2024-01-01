@@ -31,7 +31,7 @@ class Halkendaraan extends BaseController
         $data = [
             'content'          => 'hal-c-kendaraan',
             'judul'            => 'Rekayasa Web (Aplikasi UAS)',
-            'sub_judul'        => 'Selamat datang di halaman kendaraan',
+            'sub_judul'        => 'Selamat datang di halaman Kendaraan !',
             'detail_kendaraan' => $this->model_crud->detailkendaraan($id_kendaraan),
             'data_kendaraan'   => $this->model_crud->tampilkendaraan(),
             'id_kendaraan'     => $id_kendaraan

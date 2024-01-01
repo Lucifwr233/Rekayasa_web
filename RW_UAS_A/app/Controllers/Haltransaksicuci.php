@@ -20,7 +20,7 @@ class Haltransaksicuci extends BaseController
     {
         $data['content']            = 'hal-c-transaksicuci';
         $data['judul']              = 'Rekayasa Web (Aplikasi UAS)';
-        $data['sub_judul']          = 'Selamat datang di halaman transaksi cuci';
+        $data['sub_judul']          = 'Selamat datang di halaman Transaksi Cuci !';
         $data['data_transaksicuci'] = $this->model_crud->tampiltransaksicuci();
 
         echo view('_applayout', $data);

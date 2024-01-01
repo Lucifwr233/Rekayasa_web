@@ -45,7 +45,7 @@
  
 <body>
     <center style="margin-top: 2.5%; margin-bottom: 1%;">
-        <h1 style="font-family: 'Sofia', sans-serif; font-weight: bold; color: green"><?= $judul; ?></h1>
+    <br>
         <h4><?= $sub_judul; ?></h4>    
     </center>
 

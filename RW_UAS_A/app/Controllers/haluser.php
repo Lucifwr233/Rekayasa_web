@@ -30,7 +30,7 @@ class Haluser extends BaseController
         $data = [
             'content'      => 'hal-c-user',
             'judul'        => 'Rekayasa Web (Aplikasi UAS)',
-            'sub_judul'    => 'Selamat datang di halaman user',
+            'sub_judul'    => 'Selamat datang di halaman User !',
             'detail_user' => $this->model_crud->detailuser($id_user),
             'data_user'   => $this->model_crud->tampiluser(),
             'id_user'     => $id_user

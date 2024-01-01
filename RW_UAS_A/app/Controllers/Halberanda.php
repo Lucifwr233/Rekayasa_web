@@ -26,7 +26,7 @@ class Halberanda extends BaseController
 
         $data['content'] = 'hal-c-beranda';
         $data['judul'] = 'Rekayasa Web (Aplikasi UAS)';
-        $data['sub_judul'] = 'Selamat datang di halaman beranda';
+        $data['sub_judul'] = 'Selamat datang di Beranda !';
         $data['jumlah_data_pelanggan'] = $query_jumlah_pelanggan->jumlah_data;
         $data['jumlah_data_kendaraan'] = $query_jumlah_kendaraan->jumlah_data;
         $data['jumlah_data_transaksi_cuci'] = $query_jumlah_transaksi_cuci->jumlah_data;

@@ -1,11 +1,6 @@
 <!-- Views/hal-c-beranda.php -->
 
 <div class="container">
-    <center>
-        <h4 class="mb-4" style="font-family: 'Sofia', sans-serif; font-weight: bold;">
-            <i class="fa fa-home"></i> Halaman Beranda
-        </h4>
-    </center>
 
     <div class="row">
         <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
