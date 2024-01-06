@@ -22,6 +22,7 @@ class Halkendaraan extends BaseController
         $data['judul']         = 'Rekayasa Web (Aplikasi UAS)';
         $data['sub_judul']     = 'Selamat datang di halaman kendaraan';
         $data['data_kendaraan'] = $this->model_crud->tampilkendaraan();
+        $data['data_pelanggan']     = $this->model_crud->tampilpelanggan();
 
         echo view('_applayout', $data);
     }
@@ -32,8 +33,10 @@ class Halkendaraan extends BaseController
             'content'          => 'hal-c-kendaraan',
             'judul'            => 'Rekayasa Web (Aplikasi UAS)',
             'sub_judul'        => 'Selamat datang di halaman Kendaraan !',
+            'detail_pelanggan'      => $this->model_crud->detailpelanggan($id_pelanggan),
             'detail_kendaraan' => $this->model_crud->detailkendaraan($id_kendaraan),
             'data_kendaraan'   => $this->model_crud->tampilkendaraan(),
+            'data_pelanggan'   => $this->model_crud->tampilpelanggan(),
             'id_kendaraan'     => $id_kendaraan
         ];
 

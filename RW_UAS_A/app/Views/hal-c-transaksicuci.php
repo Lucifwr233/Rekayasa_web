@@ -12,6 +12,24 @@
 
                     <!-- Add fields for id_kendaraan and id_transaksi -->
 
+                    <!-- coba baru -->
+                    <div class="row mb-2">
+                        <label class="col-4">ID Kendaraan</label>
+                        <div class="col-8">
+                            <select class="form-control" name="inputan_id_kendaraan" required>
+                                <?php if(!empty($detail_transaksicuci->ID_Kendaraan)) { ?>
+                                <option value="<?= $detail_transaksicuci->ID_Kendaraan ?>"></option>
+                                <?php } ?>
+                                
+                                <option value=""> -- Silahkan Pilih --</option>
+                                <?php foreach ($data_kendaraan as $kendaraan) { ?>
+                                <option value="<?= $kendaraan['ID_Kendaraan'] ?>"><?= $kendaraan['ID_Kendaraan']?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                    </div>
+<!-- end of coba baru -->
+
                     <div class="row mb-2">
                         <label class="col-4">ID Kendaraan</label>
                         <div class="col-8">

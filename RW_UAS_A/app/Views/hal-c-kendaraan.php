@@ -6,6 +6,23 @@
                 <form method="post" enctype="multipart/form-data" action="<?= base_url('halkendaraan/simpandata'); ?>">
 
                     <input class="form-control" type="hidden" name="inputan_id_kendaraan" value="<?= $id_kendaraan ?>">                    
+<!-- coba baru -->
+                    <div class="row mb-2">
+                        <label class="col-4">ID Pelanggan</label>
+                        <div class="col-8">
+                            <select class="form-control" name="inputan_idpelanggan" required>
+                                <?php if(!empty($detail_kendaraan->ID_Pelanggan)) { ?>
+                                <option value="<?= $detail_kendaraan->ID_Pelanggan ?>"></option>
+                                <?php } ?>
+                                
+                                <option value=""> -- Silahkan Pilih --</option>
+                                <?php foreach ($data_pelanggan as $pelanggan) { ?>
+                                <option value="<?= $pelanggan['ID_Pelanggan'] ?>"><?= $pelanggan['ID_Pelanggan']?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                    </div>
+<!-- end of coba baru -->
 
                     <div class="row mb-2">
                         <label class="col-4">ID Pelanggan</label>
