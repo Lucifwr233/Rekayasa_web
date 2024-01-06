@@ -30,12 +30,12 @@
                     </div>
 <!-- end of coba baru -->
 
-                    <div class="row mb-2">
+                    <!-- <div class="row mb-2">
                         <label class="col-4">ID Kendaraan</label>
                         <div class="col-8">
                             <input class="form-control" type="text" name="inputan_id_kendaraan" required value="<?= $detail_transaksicuci->ID_Kendaraan ?>">
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="row mb-2">
                         <label class="col-4">Tanggal Cuci</label>

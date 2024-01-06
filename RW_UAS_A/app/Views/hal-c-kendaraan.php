@@ -24,12 +24,12 @@
                     </div>
 <!-- end of coba baru -->
 
-                    <div class="row mb-2">
+                    <!-- <div class="row mb-2">
                         <label class="col-4">ID Pelanggan</label>
                         <div class="col-8">
                             <input class="form-control" type="text" name="inputan_idpelanggan" required value="<?= $detail_kendaraan->ID_Pelanggan ?>">
                         </div>
-                    </div>
+                    </div> -->
                     
                     <div class="row mb-2">
                         <label class="col-4">Jenis Kendaraan</label>
