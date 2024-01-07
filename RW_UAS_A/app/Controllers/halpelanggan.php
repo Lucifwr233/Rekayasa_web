@@ -42,12 +42,21 @@ class Halpelanggan extends BaseController
 
     public function simpandata()
     {
+        $inputan_foto = $this->request->getFile('inputan_foto');
+        if(!empty($inputan_foto->getBasename())){
+            $berkas_foto = $inputan_foto->getRandomName();
+            $inputan_foto->move(ROOTPATH . 'public/foto-pelanggan/', $berkas_foto);
+        }else{
+            $berkas_foto = $this->request->getPost('nama_foto_tersimpan');
+        }
+
         $id_pelanggan = $this->request->getPost('inputan_id_pelanggan');
 
         $data = [
             'Nama_Pelanggan'    => $this->request->getPost('inputan_nama'),
             'Alamat'            => $this->request->getPost('inputan_alamat'),
-            'Nomor_Telepon'     => $this->request->getPost('inputan_telp')
+            'Nomor_Telepon'     => $this->request->getPost('inputan_telp'),
+            'foto_pelanggan'  => $berkas_foto,
         ];
 
         if (empty($id_pelanggan)) {

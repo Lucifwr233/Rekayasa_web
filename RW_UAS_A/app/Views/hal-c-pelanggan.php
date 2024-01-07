@@ -27,6 +27,14 @@
                             <textarea class="form-control" name="inputan_telp" required><?= $detail_pelanggan->Nomor_Telepon ?></textarea>
                         </div>
                     </div>
+
+                    <div class="row mb-2">
+                        <label class="col-4">Foto Pelanggan</label>
+                        <div class="col-8">
+                            <input class="form-control" type="file" name="inputan_foto">
+                            <input class="form-control" type="hidden" name="nama_foto_tersimpan" value="<?= $detail_pelanggan->foto_pelanggan ?>">
+                        </div>
+                    </div>
                     <!-- Add more fields as needed -->
 
                     <!-- Button or submit -->
@@ -51,6 +59,7 @@
                             <th>Nama</th>
                             <th>Alamat</th>
                             <th>Nomor Telepon</th>
+                            <th>Foto Pelanggan</th>
                             <th>Opsi</th>
                         </tr>
                     </thead>
@@ -62,6 +71,9 @@
                             <td><?= $pelanggan['Nama_Pelanggan'] ?></td>
                             <td><?= $pelanggan['Alamat'] ?></td>
                             <td><?= $pelanggan['Nomor_Telepon'] ?></td>
+                            <td>
+                                <img src="<?= base_url().'/public/foto-pelanggan/'.$pelanggan['foto_pelanggan'] ?>" height="100%" width="50px" style="border: 2.5px solid grey;">
+                            </td>
                             <td>
                                 <a href="<?= base_url('halpelanggan/detaildata/'.$pelanggan['ID_Pelanggan']) ?>" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
                                 <a onclick="return confirm('Yakin hapus ?')" href="<?= base_url('halpelanggan/hapusdata/'.$pelanggan['ID_Pelanggan']) ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
