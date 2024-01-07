@@ -203,7 +203,6 @@ $query_tampil_data = mysqli_query($koneksi_db, 'select * from cuci_kendaraan');
     }
     ?>
 
-
     <!-- //hapus -->
     <?php
     if (isset($_GET['delete_id_nota'])) {
