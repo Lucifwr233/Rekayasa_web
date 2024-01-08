@@ -58,7 +58,7 @@
                     <div class="row mb-2">
                         <label class="col-4">Total Biaya</label>
                         <div class="col-8">
-                            <input class="form-control" type="text" name="inputan_total_biaya" id="inputan_total_biaya" required value="<?= $detail_transaksicuci->Total_Biaya ?>">
+                            <input class="form-control" type="text" name="inputan_total_biaya" id="inputan_total_biaya" readonly value="<?= $detail_transaksicuci->Total_Biaya ?>">
                         </div>
                     </div>
 
