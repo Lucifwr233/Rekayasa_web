@@ -7,7 +7,6 @@
     
     <title>Halaman Masuk - Aplikasi UAS Rekayasa Web</title>
     
-
     <!-- Komponen CSS Bootstrap 4 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js">
