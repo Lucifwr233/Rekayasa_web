@@ -32,6 +32,7 @@
     font-family: 'Poppins', sans-serif
 }
 
+
 .container {
     margin: 50px auto;
 }
