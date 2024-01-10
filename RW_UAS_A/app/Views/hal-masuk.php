@@ -56,6 +56,7 @@
     object-fit: cover;
 }
 
+
 .box-2 {
     padding: 10px;
 }
