@@ -95,6 +95,7 @@
     border: 2px solid #ee82ee;
 }
 
+
 .box:hover {
     border: 2px solid #ee82ee;
 }
