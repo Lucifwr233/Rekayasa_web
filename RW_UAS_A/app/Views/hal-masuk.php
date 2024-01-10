@@ -89,6 +89,7 @@
     color: #615f5fdd;
 }
 
+
 .box:active,
 .box:visited {
     border: 2px solid #ee82ee;
