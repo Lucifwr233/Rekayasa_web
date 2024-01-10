@@ -25,7 +25,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-        
+
 * {
     margin: 0;
     padding: 0;
@@ -48,6 +48,7 @@
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
 
 .box-1 img {
     width: 100%;
