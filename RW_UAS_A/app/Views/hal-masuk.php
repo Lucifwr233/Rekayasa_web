@@ -112,6 +112,7 @@
     font-size: 12px;
 }
 
+
 .footer .p-color {
     color: #ee82ee;
 }
