@@ -60,6 +60,7 @@
 			padding: .4rem .65rem;
 			text-align: center;
 		}
+		
 		header li.menu-item a:hover,
 		header li.menu-item a:focus {
 			background-color: rgba(221, 72, 20, .2);
