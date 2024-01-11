@@ -45,6 +45,7 @@
 		header li {
 			display: inline-block;
 		}
+		
 		header li a {
 			border-radius: 5px;
 			color: rgba(0, 0, 0, .5);
