@@ -90,7 +90,6 @@
 			overflow: visible;
 			width: 40px;
 		}
-		
 		header .menu-toggle button:hover,
 		header .menu-toggle button:focus {
 			background-color: rgba(221, 72, 20, .8);
