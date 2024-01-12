@@ -154,12 +154,11 @@
 			background-color: rgba(221, 72, 20, .8);
 			text-align: center;
 		}
-		
 		footer .environment {
 			color: rgba(255, 255, 255, 1);
 			padding: 2rem 1.75rem;
 		}
-
+		
 		footer .copyrights {
 			background-color: rgba(62, 62, 62, 1);
 			color: rgba(200, 200, 200, 1);
