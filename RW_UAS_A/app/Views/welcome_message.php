@@ -108,7 +108,6 @@
 			font-size: 1.5rem;
 			font-weight: 300;
 		}
-		
 		section {
 			margin: 0 auto;
 			max-width: 1100px;
@@ -117,7 +116,7 @@
 		section h1 {
 			margin-bottom: 2.5rem;
 		}
-
+		
 		section h2 {
 			font-size: 120%;
 			line-height: 2.5rem;
