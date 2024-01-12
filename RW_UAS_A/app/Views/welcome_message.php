@@ -116,12 +116,13 @@
 		section h1 {
 			margin-bottom: 2.5rem;
 		}
+		
 		section h2 {
 			font-size: 120%;
 			line-height: 2.5rem;
 			padding-top: 1.5rem;
 		}
-		
+
 		section pre {
 			background-color: rgba(247, 248, 249, 1);
 			border: 1px solid rgba(242, 242, 242, 1);
