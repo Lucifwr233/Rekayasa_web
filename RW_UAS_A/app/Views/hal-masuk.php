@@ -72,7 +72,6 @@
     font-weight: 700;
 }
 
-
 .text-muted {
     font-size: 14px;
 }
