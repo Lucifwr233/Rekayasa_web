@@ -121,6 +121,7 @@
 			line-height: 2.5rem;
 			padding-top: 1.5rem;
 		}
+		
 		section pre {
 			background-color: rgba(247, 248, 249, 1);
 			border: 1px solid rgba(242, 242, 242, 1);
@@ -131,7 +132,7 @@
 			white-space: pre-wrap;
 			word-break: break-all;
 		}
-		
+
 		section code {
 			display: block;
 		}
