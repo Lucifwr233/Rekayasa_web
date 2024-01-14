@@ -137,12 +137,13 @@
 		section a {
 			color: rgba(221, 72, 20, 1);
 		}
+		
 		section svg {
 			margin-bottom: -5px;
 			margin-right: 5px;
 			width: 25px;
 		}
-		
+
 		.further {
 			background-color: rgba(247, 248, 249, 1);
 			border-bottom: 1px solid rgba(242, 242, 242, 1);
