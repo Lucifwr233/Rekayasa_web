@@ -147,10 +147,11 @@
 			border-bottom: 1px solid rgba(242, 242, 242, 1);
 			border-top: 1px solid rgba(242, 242, 242, 1);
 		}
+		
 		.further h2:first-of-type {
 			padding-top: 0;
 		}
-		
+
 		footer {
 			background-color: rgba(221, 72, 20, .8);
 			text-align: center;
