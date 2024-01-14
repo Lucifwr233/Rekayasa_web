@@ -134,10 +134,11 @@
 		section code {
 			display: block;
 		}
+		
 		section a {
 			color: rgba(221, 72, 20, 1);
 		}
-		
+
 		section svg {
 			margin-bottom: -5px;
 			margin-right: 5px;
