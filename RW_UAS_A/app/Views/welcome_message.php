@@ -131,10 +131,11 @@
 			white-space: pre-wrap;
 			word-break: break-all;
 		}
+		
 		section code {
 			display: block;
 		}
-		
+
 		section a {
 			color: rgba(221, 72, 20, 1);
 		}
