@@ -113,10 +113,11 @@
 			max-width: 1100px;
 			padding: 2.5rem 1.75rem 3.5rem 1.75rem;
 		}
+		
 		section h1 {
 			margin-bottom: 2.5rem;
 		}
-		
+
 		section h2 {
 			font-size: 120%;
 			line-height: 2.5rem;
