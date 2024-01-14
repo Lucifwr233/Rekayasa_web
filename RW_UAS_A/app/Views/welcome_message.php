@@ -150,11 +150,12 @@
 		.further h2:first-of-type {
 			padding-top: 0;
 		}
+		
 		footer {
 			background-color: rgba(221, 72, 20, .8);
 			text-align: center;
 		}
-		
+
 		footer .environment {
 			color: rgba(255, 255, 255, 1);
 			padding: 2rem 1.75rem;
