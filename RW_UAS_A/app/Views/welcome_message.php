@@ -126,7 +126,7 @@
 			line-height: 2.5rem;
 			padding-top: 1.5rem;
 		}
-		
+
 
 		section pre {
 			background-color: rgba(247, 248, 249, 1);
@@ -178,6 +178,7 @@
 			color: rgba(200, 200, 200, 1);
 			padding: .25rem 1.75rem;
 		}
+		
 
 		@media (max-width: 559px) {
 			header ul {
