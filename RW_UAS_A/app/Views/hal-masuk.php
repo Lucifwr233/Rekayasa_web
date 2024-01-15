@@ -65,6 +65,7 @@
 .box-2 {
     width: 50%;
 }
+
 .h-1 {
     font-size: 24px;
     font-weight: 700;
