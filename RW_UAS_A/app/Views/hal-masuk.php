@@ -137,6 +137,7 @@
     color: #ff0000;
 }
 
+
 @media (max-width:767px) {
     body {
         padding: 10px;
