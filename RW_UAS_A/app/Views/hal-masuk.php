@@ -72,6 +72,7 @@
 .text-muted {
     font-size: 14px;
 }
+
 .container .box {
     width: 100px;
     height: 100px;
