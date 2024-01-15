@@ -109,13 +109,14 @@
 			font-weight: 300;
 		}
 		
-		
+
 		section {
 			margin: 0 auto;
 			max-width: 1100px;
 			padding: 2.5rem 1.75rem 3.5rem 1.75rem;
 		}
 
+		
 		section h1 {
 			margin-bottom: 2.5rem;
 		}
