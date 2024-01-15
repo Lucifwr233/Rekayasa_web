@@ -116,7 +116,7 @@
 			padding: 2.5rem 1.75rem 3.5rem 1.75rem;
 		}
 
-		
+
 		section h1 {
 			margin-bottom: 2.5rem;
 		}
@@ -126,6 +126,7 @@
 			line-height: 2.5rem;
 			padding-top: 1.5rem;
 		}
+		
 
 		section pre {
 			background-color: rgba(247, 248, 249, 1);
