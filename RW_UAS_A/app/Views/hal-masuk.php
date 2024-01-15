@@ -115,6 +115,7 @@
     color: #ee82ee;
 }
 
+
 .footer.text-muted {
     font-size: 10px;
 }
