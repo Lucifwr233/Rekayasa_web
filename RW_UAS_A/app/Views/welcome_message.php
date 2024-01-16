@@ -108,7 +108,6 @@
 			font-size: 1.5rem;
 			font-weight: 300;
 		}
-		
 
 		section {
 			margin: 0 auto;
